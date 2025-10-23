@@ -60,7 +60,7 @@ body {
     color: white;
     text-decoration: none;
     font-family: inherit;
-    font-size: 20px;
+    font-size: 30px;
     text-transform: capitalize;
 }
 
@@ -105,7 +105,7 @@ body {
 }
 
 .header__title {
-    font-size: 128px;
+    font-size: 138px;
     font-weight: 700;
     text-transform: uppercase;
     max-width: 600px;
@@ -113,7 +113,7 @@ body {
 }
 
 .header__subtitle {
-    font-size: 24px;
+    font-size: 34px;
     font-weight: 400;
     line-height: normal;
 }
@@ -136,7 +136,7 @@ body {
 
 @media screen and (max-width: 1245px) {
     .header__title {
-        font-size: 100px;
+        font-size: 110px;
     }
 }
 
@@ -144,19 +144,32 @@ body {
     .header__nav {
         display: none;
     }
+
     .header__menu {
         display: block;
     }
+
     .header__overlay {
         padding: 40px;
     }
+
     .header__title {
-        font-size: 60px;
+        font-size: 70px;
     }
+
     .header__subtitle {
-        font-size: 18px;
+        font-size: 28px;
     }
+
     .header {
         height: 500px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .footer__nav {
+        flex-direction: column; 
+        padding-top: 80px;
+        gap: 20px;
     }
 }
