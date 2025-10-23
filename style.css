@@ -166,10 +166,10 @@ body {
     }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 600px) {
     .footer__nav {
         flex-direction: column; 
-        padding-top: 90px;
+        padding-top: 80px;
         gap: 20px;
     }
 }
