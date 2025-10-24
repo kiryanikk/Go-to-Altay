@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
 
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
@@ -93,7 +93,7 @@ body {
     right: 13px;
     bottom: 13px;
     z-index: 2;
-
+    font-size: 24PX;
     color: rgba(255, 255, 255, 0.50);
     font-weight: 800;
     text-transform: capitalize;
@@ -118,6 +118,99 @@ body {
     line-height: normal;
 }
 
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(10, 435px);
+    gap: 30px;
+    max-width: 1244px;
+        grid-auto-flow: dense;
+}
+
+.gallery__card {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 0;
+    border-radius: 16px;
+}
+
+.gallery__photo {
+    width: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+.first {
+    grid-row: span 2;
+}
+
+.second {
+    grid-column: span 2;
+}
+
+.forth {
+    grid-row: span 2;
+}
+
+.fifth {
+    grid-column: span 2;
+}
+
+.sixth {
+    grid-column: span 3;
+}
+
+.seventh {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.eleventh {
+    grid-column: span 2;
+}
+
+.twelfth {
+    grid-column: span 3;
+    grid-row: span 3;
+}
+
+.second::after,
+.sixth::after,
+.eleventh::after,
+.twelfth::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(44, 44, 44, 0.5);
+    border-radius: 16px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.gallery__card-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 50px;
+    box-sizing: border-box;
+
+    font-size: 40px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: normal;
+
+    width: 80%;
+    height: 100%;
+}
 
 .footer {
     width: 100%;
@@ -137,6 +230,25 @@ body {
 @media screen and (max-width: 1245px) {
     .header__title {
         font-size: 110px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(9, 486px);
+        padding: 0 30px;
+    }
+
+    .gallery__card {
+        grid-row: span 1;
+        grid-column: span 2;
+    }
+
+    .gallery__card-description {
+        font-size: 20px;
+    }
+
+    .gallery__card:nth-of-type(2n) {
+        grid-column: span 1;
     }
 }
 
@@ -164,12 +276,25 @@ body {
     .header {
         height: 500px;
     }
-}
 
-@media screen and (max-width: 600px) {
+    .gallery {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(12, 357px);
+        padding: 0 30px;
+    }
+
+    .gallery__card {
+        grid-row: span 1;
+        grid-column: span 1;
+    }
+
+    .gallery__card-description {
+        font-size: 16px;
+    }
+
     .footer__nav {
         flex-direction: column; 
-        padding-top: 80px;
+        max-width: 97px;
         gap: 20px;
     }
 }
